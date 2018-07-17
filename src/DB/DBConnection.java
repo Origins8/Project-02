@@ -2,18 +2,10 @@ package DB;
 
 import java.sql.*;
 
-public class Connection {
+public class DBConnection {
     
     java.sql.Connection conn = null;
-    private Statement stmt = null;
-
-    public Statement getStmt() {
-        return stmt;
-    }
-
-    public void setStmt(Statement stmt) {
-        this.stmt = stmt;
-    }
+    Statement stmt = null;
     
     public void connecting() throws SQLException
     {     
