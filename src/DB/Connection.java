@@ -5,7 +5,15 @@ import java.sql.*;
 public class Connection {
     
     java.sql.Connection conn = null;
-    Statement stmt = null;
+    private Statement stmt = null;
+
+    public Statement getStmt() {
+        return stmt;
+    }
+
+    public void setStmt(Statement stmt) {
+        this.stmt = stmt;
+    }
     
     public void connecting() throws SQLException
     {     
