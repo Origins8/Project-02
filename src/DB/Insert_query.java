@@ -2,7 +2,7 @@ package DB;
 
 import java.sql.*;
 
-public class Insert_query extends DBConnection{
+public class Insert_query extends DB.DBConnection{
  
     public static String insert(String Id, String Name, int Age, String Address ) {
         
@@ -10,7 +10,7 @@ public class Insert_query extends DBConnection{
                   
         try {
                 java.sql.Statement stmt = conn.createStatement();
-                    stmt.executeUpdate(insert);;
+                stmt.executeUpdate(insert);;
         }catch (SQLException e) {
              
         }

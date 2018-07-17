@@ -10,6 +10,9 @@ public class Project02 {
         System.out.println("|||||||||||||||WELCOME TO STUDENT MANAGEMENT SYSTEM|||||||||||||||");
         
         DB.DBConnection objDBConnection = new DB.DBConnection();
+        
+        System.out.println("\nWhich operation do you want to do?\n\t1-Add new Student\n\t2-Get all Student informations\n\t3-Get one Student information\n");
+        int UserChoice = objUser.nextInt(); //Get the input from the user 
     }
     
 }
