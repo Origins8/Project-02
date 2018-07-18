@@ -4,15 +4,16 @@ public class ContinuationSelection {
     
     User.UserInputString objStringInput = new User.UserInputString();
     User.UserDecision objDecision = new User.UserDecision();
+    Looping.MainLoop objLoop = new Looping.MainLoop();
     
-    public void DecisionContinuation(){
+    public void DecisionContinuation(String decision){
         
-        if("y".equals(objStringInput.getInput())){
-            
-        }else if ("n".equals(objStringInput.getInput())){
+        if("y".equals(decision)){
+            objLoop.LoopingMain();
+        }else if ("n".equals(decision)){
             System.out.println("\nTHANK YOU!\n");
         }else{
-            System.out.println("Sorry wrong selection\n");
+            System.out.println("\nSorry wrong selection\n");
             objDecision.YesOrNo();
         }
     }

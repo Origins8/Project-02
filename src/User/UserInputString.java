@@ -18,7 +18,7 @@ public class UserInputString {
     public void GetStringInput(){
         setInput(objUser.next());
         Factory.ContinuationSelection objContinueSelection = new Factory.ContinuationSelection();
-        objContinueSelection.DecisionContinuation();
+        objContinueSelection.DecisionContinuation(getInput());
     }
     
 }

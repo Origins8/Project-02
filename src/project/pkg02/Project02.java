@@ -13,12 +13,10 @@ public class Project02 {
             e.printStackTrace();
             return;
         }
-         
-        User.userInputNumber objInput = new User.userInputNumber(); 
-        objInput.GetNumberInput();
         
-        User.UserDecision objDecision = new User.UserDecision();
-        objDecision.YesOrNo();
+        Looping.MainLoop objLoop = new Looping.MainLoop();
+        objLoop.LoopingMain();
+         
     }
     
 }
