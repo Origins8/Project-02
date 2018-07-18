@@ -25,7 +25,7 @@ public class QueryInput {
         try {
             objInsert.InsertFunction(objStudent);
         } catch (SQLException ex) {
-            Logger.getLogger(QueryInput.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
 }

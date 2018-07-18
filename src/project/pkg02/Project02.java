@@ -1,9 +1,5 @@
 package project.pkg02;
 
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class Project02 {
     
     public static void main(String[] args) {
@@ -12,6 +8,7 @@ public class Project02 {
         
         try{
             DB.DBConnection objDBConnection = new DB.DBConnection();
+            objDBConnection.DBConnection();
         }catch(Exception e){
             e.printStackTrace();
             return;
