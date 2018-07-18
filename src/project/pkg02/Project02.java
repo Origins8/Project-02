@@ -1,5 +1,9 @@
 package project.pkg02;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Project02 {
     
     public static void main(String[] args) {
@@ -12,12 +16,19 @@ public class Project02 {
             e.printStackTrace();
             return;
         }
-             
+         
         User.userInputNumber objInput = new User.userInputNumber(); 
         objInput.GetNumberInput();
         
         Factory.OperationSelection objSelection = new Factory.OperationSelection();
-        objSelection.Decision();
+        try {
+            objSelection.Decision();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        
+        User.UserDecision objDecision = new User.UserDecision();
+        objDecision.YesOrNo();
     }
     
 }

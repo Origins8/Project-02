@@ -9,46 +9,27 @@ public class OperationSelection {
     
     User.userInputNumber objInput = new User.userInputNumber();
      
-    public void Decision(){
+    public void Decision() throws SQLException{
      
         switch(objInput.getInput()){
         
         case 1:
-        { 
-            try {
-                DB.Insert_query objInsert = new DB.Insert_query();
-                objInsert.InsertFunction();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
+            DB.Insert_query objInsert = new DB.Insert_query();
+            objInsert.InsertFunction();
             break;
             
         case 2:
-        {
-            try {
-                DB.Retrieve_Full_Info objFull = new DB.Retrieve_Full_Info();
-                objFull.RetrieveFullFunction();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
+            DB.Retrieve_Full_Info objFull = new DB.Retrieve_Full_Info();
+            objFull.RetrieveFullFunction();
             break;
             
         case 3:
-        {
-            try {
-                DB.Retrieve_Specific_Info objSpecific = new DB.Retrieve_Specific_Info();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
+            DB.Retrieve_Specific_Info objSpecific = new DB.Retrieve_Specific_Info();
+            objSpecific.RetrieveSpecificInfo();
             break;
             
         default:
             System.out.println("Sorry your choice of action is incorrect. Please try again!");
-            User.UserDecision objContinuation = new User.UserDecision();
-            objContinuation.YesOrNo();
             break;
         }   
     }
