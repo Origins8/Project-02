@@ -17,6 +17,7 @@ public class OperationSelection {
         { 
             try {
                 DB.Insert_query objInsert = new DB.Insert_query();
+                objInsert.InsertFunction();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
@@ -27,6 +28,7 @@ public class OperationSelection {
         {
             try {
                 DB.Retrieve_Full_Info objFull = new DB.Retrieve_Full_Info();
+                objFull.RetrieveFullFunction();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
