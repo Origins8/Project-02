@@ -11,6 +11,6 @@ public class Retrieve_Specific_Info extends DB.DBConnection{
         personal = "SELECT ID, NAME, AGE, ADDRESS FROM `student`";
         
         Looping.GetSingleInfo objSingle = new Looping.GetSingleInfo();
-        objSingle.LoopingStatementSingle();
+        objSingle.LoopingStatementSingle(personal);
     }
 }

@@ -11,9 +11,9 @@ public class GetSingleInfo extends DB.DBConnection{
     DisplayInfo.FullInfo objInfoFull = new DisplayInfo.FullInfo();
     User.RetreiveSingleInfo objIdOnly = new User.RetreiveSingleInfo();
     
-    public void LoopingStatementSingle() throws SQLException{ 
-        DB.Retrieve_Specific_Info objSingle = new DB.Retrieve_Specific_Info();
-        rs = stmt.executeQuery(objSingle.personal);
+    public void LoopingStatementSingle(String Personal) throws SQLException{ 
+
+        rs = stmt.executeQuery(Personal);
         
         while(rs.next()){
             //Retrieve by column name
