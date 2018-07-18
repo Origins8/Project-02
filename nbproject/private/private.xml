@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/Student/Student.java</file>
-            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/DB/Connection.java</file>
-            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/User/user.java</file>
+            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/DB/Insert_query.java</file>
+            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/User/UserDecision.java</file>
+            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/User/userInput.java</file>
             <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/project/pkg02/Project02.java</file>
+            <file>file:/C:/Users/prasanth/Desktop/Student%20Management/Project%2002/src/DB/DBConnection.java</file>
         </group>
     </open-files>
 </project-private>
