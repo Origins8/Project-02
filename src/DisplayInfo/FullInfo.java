@@ -2,9 +2,7 @@ package DisplayInfo;
 
 public class FullInfo {
     
-    Student.StudentInfo objStudent = new Student.StudentInfo();
-    
-    public void ShowFullInfo(){
+    public void ShowFullInfo(Student.StudentInfo objStudent){
         System.out.println("\nStudent ID        : " + objStudent.getStId());
         System.out.println("Student name      : " + objStudent.getStName());
         System.out.println("Student age       : " + objStudent.getStAge());

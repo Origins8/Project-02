@@ -12,8 +12,8 @@ public class OperationSelection {
         switch(number){
         
         case 1:
-            DB.Insert_query objInsert = new DB.Insert_query();
-            objInsert.InsertFunction();
+            Student.AddInformations objAdd = new Student.AddInformations();
+            objAdd.GetForAdd();
             break;
             
         case 2:

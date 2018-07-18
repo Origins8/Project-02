@@ -7,7 +7,6 @@ public class StudentInfo {
     private String stAddress;
 
     public StudentInfo() {
-        
     }
     
     public StudentInfo(String stId, String stName, int stAge, String stAddress) {

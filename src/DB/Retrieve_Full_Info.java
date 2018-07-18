@@ -4,12 +4,20 @@ import java.sql.SQLException;
 
 public class Retrieve_Full_Info extends DB.DBConnection{
     
-    public String all;
+    private String all;
+
+    public String getAll() {
+        return all;
+    }
+
+    public void setAll(String all) {
+        this.all = all;
+    }
+    
+    Looping.GetFullInfo objGetFullInfo = new Looping.GetFullInfo();
     
     public void RetrieveFullFunction() throws SQLException{
-        all = "SELECT ID, NAME, AGE, ADDRESS FROM `student`";
-        
-        Looping.GetFullInfo objGetFullInfo = new Looping.GetFullInfo();
-        objGetFullInfo.LoopingStatement(all);
+        setAll("SELECT ID, NAME, AGE, ADDRESS FROM `student`");
+        objGetFullInfo.LoopingStatement(getAll());
     }   
 }

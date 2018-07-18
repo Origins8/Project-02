@@ -3,25 +3,25 @@ package Looping;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class GetFullInfo extends DB.DBConnection{
+public class GetFullInfo{
+   
+    DB.DBConnection objDB = new DB.DBConnection();
+    Student.StudentInfo objStudent = new Student.StudentInfo();
+    DisplayInfo.FullInfo objInfoFull = new DisplayInfo.FullInfo();
     
     public void LoopingStatement(String Query) throws SQLException{
-
-        ResultSet rs;
+  
+        objDB.DBConnection();
+        objDB.setRs(objDB.getStmt().executeQuery(Query));
         
-        rs = stmt.executeQuery(Query);
-        
-        Student.StudentInfo objStudent = new Student.StudentInfo();
-        DisplayInfo.FullInfo objInfoFull = new DisplayInfo.FullInfo();
-        
-        while(rs.next()){
+        while(objDB.getRs().next()){
             //Retrieve by column name
-            objStudent.setStId(rs.getString("ID"));
-            objStudent.setStName(rs.getString("NAME"));
-            objStudent.setStAge(rs.getInt("AGE"));
-            objStudent.setStAddress(rs.getString("ADDRESS"));
+            objStudent.setStId(objDB.getRs().getString("ID"));
+            objStudent.setStName(objDB.getRs().getString("NAME"));
+            objStudent.setStAge(objDB.getRs().getInt("AGE"));
+            objStudent.setStAddress(objDB.getRs().getString("ADDRESS"));
             
-            objInfoFull.ShowFullInfo();
+            objInfoFull.ShowFullInfo(objStudent);
         }
     }
 }

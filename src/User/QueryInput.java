@@ -1,6 +1,9 @@
 package User;
 
+import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class QueryInput {
     
@@ -17,5 +20,12 @@ public class QueryInput {
         objStudent.setStAge(onjInput.nextInt());
         System.out.print("Enter Student address   : ");
         objStudent.setStAddress(onjInput.next());
+
+        DB.Insert_query objInsert = new DB.Insert_query();
+        try {
+            objInsert.InsertFunction(objStudent);
+        } catch (SQLException ex) {
+            Logger.getLogger(QueryInput.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
