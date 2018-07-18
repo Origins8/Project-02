@@ -3,12 +3,15 @@ package DB;
 import java.sql.*;
 
 public class Insert_query extends DB.DBConnection{
- 
-    public static String insert(String Id, String Name, int Age, String Address ) {
+
+    public Insert_query() throws SQLException{
+
+          User.QueryInput objQueryInput = new User.QueryInput();
+          objQueryInput.SetInfo();
+          
+          Student.StudentInfo objStudent = new Student.StudentInfo();
         
-        String 20/nirata neramam send = ("INSERT INTO student(ID, NAME, AGE, ADDRESS) VALUES ('" +id+ "','" +name+ "','" +age+ "','" +address+ "')");
-
-        return (insert);
-
-        }
+          String insert = "INSERT INTO student(ID, NAME, AGE, ADDRESS) VALUES ('" +objStudent.getStId()+ "','" +objStudent.getStName()+ "','" +objStudent.getStAge()+ "','" +objStudent.getStAddress()+ "')";
+          stmt.executeUpdate(insert);
+    }
 }

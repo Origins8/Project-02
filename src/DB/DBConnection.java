@@ -6,6 +6,7 @@ public class DBConnection {
     
     Connection conn = null;
     Statement stmt = null;
+    ResultSet rs = null;
     
     public void DBConnection() throws SQLException
     {     
