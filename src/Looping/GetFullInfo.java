@@ -5,12 +5,11 @@ import java.sql.SQLException;
 
 public class GetFullInfo extends DB.DBConnection{
     
-    public void LoopingStatement() throws SQLException{
-        
-        DB.Retrieve_Full_Info objFull = new DB.Retrieve_Full_Info();
+    public void LoopingStatement(String Query) throws SQLException{
+
         ResultSet rs;
         
-        rs = stmt.executeQuery(objFull.all);
+        rs = stmt.executeQuery(Query);
         
         Student.StudentInfo objStudent = new Student.StudentInfo();
         DisplayInfo.FullInfo objInfoFull = new DisplayInfo.FullInfo();

@@ -10,6 +10,6 @@ public class Retrieve_Full_Info extends DB.DBConnection{
         all = "SELECT ID, NAME, AGE, ADDRESS FROM `student`";
         
         Looping.GetFullInfo objGetFullInfo = new Looping.GetFullInfo();
-        objGetFullInfo.LoopingStatement();
+        objGetFullInfo.LoopingStatement(all);
     }   
 }
