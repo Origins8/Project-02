@@ -1,9 +1,6 @@
 package Factory;
 
-import User.userInputNumber;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class OperationSelection {
      
@@ -22,8 +19,8 @@ public class OperationSelection {
             break;
             
         case 3:
-            DB.Retrieve_Specific_Info objSpecific = new DB.Retrieve_Specific_Info();
-            objSpecific.RetrieveSpecificInfo();
+            User.RetreiveSingleInfo objSingle = new User.RetreiveSingleInfo();
+            objSingle.GetStudentID();
             break;
             
         default:

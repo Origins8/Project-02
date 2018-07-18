@@ -2,7 +2,7 @@ package DB;
 
 import java.sql.SQLException;
 
-public class Retrieve_Specific_Info extends DB.DBConnection{
+public class Retrieve_Specific_Info {
 
     private String personal;
 
@@ -14,11 +14,7 @@ public class Retrieve_Specific_Info extends DB.DBConnection{
         this.personal = personal;
     }
     
-    Looping.GetSingleInfo objSingle = new Looping.GetSingleInfo();
-    
     public void RetrieveSpecificInfo() throws SQLException{
-    
-        setPersonal("SELECT ID, NAME, AGE, ADDRESS FROM `student`");
-        objSingle.LoopingStatementSingle(getPersonal());
+        setPersonal("SELECT ID, NAME, AGE, ADDRESS FROM `student`");   
     }
 }

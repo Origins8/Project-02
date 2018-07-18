@@ -1,5 +1,6 @@
 package User;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class RetreiveSingleInfo {
@@ -14,8 +15,12 @@ public class RetreiveSingleInfo {
         this.StudentID = StudentID;
     }
     
-    public void GetStudentID(){
+    public void GetStudentID() throws SQLException{
         Scanner objInput = new Scanner(System.in);
+        System.out.println("\nEnter Student ID        : ");
         setStudentID(objInput.next());
+        
+        Looping.GetSingleInfo objSingle = new Looping.GetSingleInfo();
+        objSingle.LoopingStatementSingle(getStudentID());
     }
 }
