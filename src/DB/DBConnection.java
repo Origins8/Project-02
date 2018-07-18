@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DBConnection {
     
-    java.sql.Connection conn = null;
+    Connection conn = null;
     Statement stmt = null;
     
     public void DBConnection() throws SQLException

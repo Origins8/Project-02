@@ -12,10 +12,12 @@ public class Project02 {
             e.printStackTrace();
             return;
         }
+             
+        User.userInputNumber objInput = new User.userInputNumber(); 
+        objInput.GetNumberInput();
         
-        System.out.println("\nWhich operation do you want to do?\n\t1-Add new Student\n\t2-Get all Student informations\n\t3-Get one Student information\n");      
-        User.userInput objInput = new User.userInput(); 
-
+        Factory.OperationSelection objSelection = new Factory.OperationSelection();
+        objSelection.Decision();
     }
     
 }

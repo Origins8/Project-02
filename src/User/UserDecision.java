@@ -2,18 +2,19 @@ package User;
 
 public class UserDecision {
     
-    private int Decision;
-    
-    public UserDecision(int Decision){
-        this.Decision = Decision;
-    }
+    private String Decision;
 
-    public int getDecision() {
+    public String getDecision() {
         return Decision;
     }
 
-    public void setDecision(int Decision) {
+    public void setDecision(String Decision) {
         this.Decision = Decision;
     }
     
+    public void YesOrNo(){
+        System.out.println("\nDo You want to continue? y-yes / n-No");
+        UserInputString objStringInput = new UserInputString();
+        objStringInput.GetStringInput();
+    }
 }

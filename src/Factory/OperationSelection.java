@@ -1,10 +1,10 @@
 package Factory;
 
-import User.userInput;
+import User.userInputNumber;
 
 public class OperationSelection {
     
-    User.userInput objInput = new User.userInput();
+    User.userInputNumber objInput = new User.userInputNumber();
      
     public void Decision(){
      
@@ -15,15 +15,17 @@ public class OperationSelection {
             break;
             
         case 2:
-        
+            DB.Retrieve_Full_Info objFull = new DB.Retrieve_Full_Info();
             break;
             
         case 3:
-        
+            DB.Retrieve_Specific_Info objSpecific = new DB.Retrieve_Specific_Info();
             break;
             
         default:
-            System.out.println("Sorry your choice of action is incorrect. Please try again!");            
+            System.out.println("Sorry your choice of action is incorrect. Please try again!");
+            User.UserDecision objContinuation = new User.UserDecision();
+            objContinuation.YesOrNo();
             break;
         }   
     }
