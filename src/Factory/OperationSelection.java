@@ -6,12 +6,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class OperationSelection {
-    
-    User.userInputNumber objInput = new User.userInputNumber();
      
-    public void Decision() throws SQLException{
+    public void Decision(int number) throws SQLException{
      
-        switch(objInput.getInput()){
+        switch(number){
         
         case 1:
             DB.Insert_query objInsert = new DB.Insert_query();

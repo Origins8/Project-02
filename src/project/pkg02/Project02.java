@@ -20,13 +20,6 @@ public class Project02 {
         User.userInputNumber objInput = new User.userInputNumber(); 
         objInput.GetNumberInput();
         
-        Factory.OperationSelection objSelection = new Factory.OperationSelection();
-        try {
-            objSelection.Decision();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        
         User.UserDecision objDecision = new User.UserDecision();
         objDecision.YesOrNo();
     }
